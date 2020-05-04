@@ -4,12 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
     <title>Weather Dashboard</title>
 </head>
 
 <body>
-    <header>Weather Dashboard</header>
+    <header>Weather Channel Dashboard</header>
+    <div id="search" class="container">
+        <form>
+            <label>City:</label>
+            <br>
+            <input inputname="searchTxt" class="city-form" id="searchBar" type="text">
+            <br><br>
+            <button type="button" id="searchcityBtn" class="searchcityButton searchcityButton:Hover">Search</button>
+        </form>
+        <div id="citiesSearched" class="card" style="width: 18rem;">
+            <ul class="citygroup citygroupflush"></ul>
+        </div>
+    </div>
+    <div class="container">
+        <h2 id="displayCity">---City name---</h2>
+        <h2 id="date">----Today's Date----</h2>
+        <h2 id="iconImage"></h2>
+
+        <p>Temperature: <span id="temperature"></span></p>
+        <p>Humidity: <span id="humidity"></span></p>
+        <p>Wind Speed: <span id="windSpeed"></span></p>
+        <p>UV Index: <span id="uvIndex"></span></p>
+    </div>
+    <div class="container">
+        <h2>5-Day Forecast:</h2>
+
+        <div id="eachDay" class="days">
+            <h4 id="theDate"></h4>
+            <span id="theIcon"></span>
+            <p>Temp: <span id="theTemp"></span></p>
+            <p>Humidity: <span id="theHumidity"></span></p>
+        </div>
+        <div id="eachDay" class="days">
+            <h4 id="theDate"></h4>
+            <span id="theIcon"></span>
+            <p>Temp: <span id="theTemp"></span></p>
+            <p>Humidity: <span id="theHumidity"></span></p>
+        </div>
+        <div id="eachDay" class="days">
+            <h4 id="theDate"></h4>
+            <span id="theIcon"></span>
+            <p>Temp: <span id="theTemp"></span></p>
+            <p>Humidity: <span id="theHumidity"></span></p>
+        </div>
+        <div id="eachDay" class="days">
+            <h4 id="theDate"></h4>
+            <span id="theIcon"></span>
+            <p>Temp: <span id="theTemp"></span></p>
+            <p>Humidity: <span id="theHumidity"></span></p>
+        </div>
+        <div id="eachDay" class="days">
+            <h4 id="theDate"></h4>
+            <span id="theIcon"></span>
+            <p>Temp: <span id="theTemp"></span></p>
+            <p>Humidity: <span id="theHumidity"></span></p>
+        </div>
+    </div>
 </body>
 
 </html>
