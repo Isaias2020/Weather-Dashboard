@@ -12,63 +12,96 @@
 
 <body>
     <header>Weather Channel Dashboard</header>
-    <div id="search" class="container">
-        <form>
-            <label>City:</label>
-            <br>
-            <input inputname="searchTxt" class="city-form" id="searchBar" type="text">
-            <br><br>
-            <button type="button" id="searchcityBtn" class="searchcityButton searchcityButton:Hover">Search</button>
-        </form>
-        <div id="citiesSearched" class="card" style="width: 18rem;">
-            <ul class="citygroup citygroupflush"></ul>
-        </div>
-    </div>
-    <div class="container">
-        <h1 id="displayCity">---City name---</h1>
-        <h1 id="day-of-week"></h1>
-        <h1 id="iconImage"></h1>
 
-        <p>Temperature: <span id="temperature"></span></p>
-        <p>Humidity: <span id="humidity"></span></p>
-        <p>Wind Speed: <span id="windSpeed"></span></p>
-        <p>UV Index: <span id="uvIndex"></span></p>
-    </div>
-    <div class="container">
-        <h2>5-Day Forecast:</h2>
+    <div class="container-fluid">
+        <div class="row justify-content-around">
+            <div class="col-3 card mt-1">
+                <div class="form mt-4">
+                    <input placeholder="City Search" class="city-form" id="searchBar" type="text">
+                    <button class="searchcityButton" id="searchcityBtn" type="submit">Search</button>
+                </div>
 
-        <div id="eachDay" class="days">
-            <h4 id="theDate"></h4>
-            <span id="theIcon"></span>
-            <p>Temp: <span id="theTemp"></span></p>
-            <p>Humidity: <span id="theHumidity"></span></p>
-        </div>
-        <div id="eachDay" class="days">
-            <h4 id="theDate"></h4>
-            <span id="theIcon"></span>
-            <p>Temp: <span id="theTemp"></span></p>
-            <p>Humidity: <span id="theHumidity"></span></p>
-        </div>
-        <div id="eachDay" class="days">
-            <h4 id="theDate"></h4>
-            <span id="theIcon"></span>
-            <p>Temp: <span id="theTemp"></span></p>
-            <p>Humidity: <span id="theHumidity"></span></p>
-        </div>
-        <div id="eachDay" class="days">
-            <h4 id="theDate"></h4>
-            <span id="theIcon"></span>
-            <p>Temp: <span id="theTemp"></span></p>
-            <p>Humidity: <span id="theHumidity"></span></p>
-        </div>
-        <div id="eachDay" class="days">
-            <h4 id="theDate"></h4>
-            <span id="theIcon"></span>
-            <p>Temp: <span id="theTemp"></span></p>
-            <p>Humidity: <span id="theHumidity"></span></p>
-        </div>
-    </div>
+                <ul class="mr-5 mt-3" id="searched-cities">
 
+                </ul>
+
+                <button class="clearhistoryBtn" id="clear-history">Clear</button>
+            </div>
+            <div class="col-7 mt-4">
+                <div class="row" id="current-weather">
+                    <div class="col-7">
+
+                        <h3><span id="current-city"></span><img id="weather-icon" src=""></h3>
+
+                        <h1 id="day-of-week"></h1>
+                        <p>Temperature: <span id="temperature"></span></p>
+                        <p>Humidity: <span id="humidity"></span></p>
+                        <p>Wind Speed: <span id="windspeed"></span></p>
+                        <p>UV Index: <span id="uvIndex"></span></p>
+
+                    </div>
+
+                </div>
+
+
+
+                <h3 class="mt-5 mb-5">5 Day Forecast: </h3>
+
+                <div class="card-row">
+                    <div class="days">
+                        <div id="day-1" class="card-body p-2">
+                            <h6 class="card-date"></h6>
+                            <img class="card-icon">
+                            <p class="card-temp"></p>
+                            <p class="card-humidity"></p>
+
+                        </div>
+                    </div>
+                    <div class="days">
+                        <div id="day-2" class="card-body p-2">
+                            <h6 class="card-date"></h6>
+                            <img class="card-icon">
+                            <p class="card-temp"></p>
+                            <p class="card-humidity"></p>
+
+                        </div>
+                    </div>
+                    <div class="days">
+                        <div id="day-3" class="card-body p-2">
+                            <h6 class="card-date"></h6>
+                            <img class="card-icon">
+                            <p class="card-temp"></p>
+                            <p class="card-humidity"></p>
+
+                        </div>
+
+                    </div>
+                    <div class="days">
+                        <div id="day-4" class=" card-body p-2">
+                            <h6 class="card-date"></h6>
+                            <img class="card-icon">
+                            <p class="card-temp"></p>
+                            <p class="card-humidity"></p>
+
+                        </div>
+                    </div>
+                    <div class="days">
+                        <div id="day-5" class="card-body p-2">
+                            <h6 class="card-date"></h6>
+                            <img class="card-icon">
+                            <p class="card-temp"></p>
+                            <p class="card-humidity"></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>

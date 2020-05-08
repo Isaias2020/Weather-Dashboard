@@ -15,28 +15,18 @@ body {
     font-size: 16px;
 }
 
-.container#search{
-    width: calc((100%/3) - 0.5em);
-    float:left;
+.searchcityButton {
+    background-color: #014f9d;
+    color: #ffffff;
 }
 
-.searchcityButton {
+.clearhistoryBtn{
     background-color: #014f9d;
     color: #ffffff;
 }
 
 #searchBar {
     float: left;
-}
-
-.container {
-    padding: 1em;
-    margin: 0.5em;
-    float: right;
-    height: 100%;
-    border: 1px solid black;
-    border-radius: 8px;
-    width: calc(((100% / 3) * 2) - 2em);
 }
 
 .days {
