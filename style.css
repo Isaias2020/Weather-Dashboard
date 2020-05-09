@@ -33,9 +33,14 @@ body {
     display: inline-block;
     background-color: #014f9d;
     color: #ffffff;
-    height: 30vh;
+    height: 40vh;
     width: calc((100% /5) - 0.5em);
     padding: 1em;
     margin: 0.1em;
+    border-radius: 8px;
+}
+
+#current-weather {
+    border: 1px solid black;
     border-radius: 8px;
 }
