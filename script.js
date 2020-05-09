@@ -24,6 +24,8 @@ $(document).ready(function () {
 
         localStorage.setItem("cities", JSON.stringify(search_history));
 
+        displaySearches();
+
         $.getJSON(weather, function (json) {
             let temp = (json.main.temp - 273.15) * (9 / 5) + 32;
             let windspeed = json.wind.speed * 2.237;
@@ -33,7 +35,6 @@ $(document).ready(function () {
             $("#temperature").text(temp.toFixed(2) + "°F");
             $("#humidity").text(json.main.humidity + "%");
             $("#windspeed").text(windspeed.toFixed(2) + " " + "mph");
-            // $("#uvIndex").text();
         });
     }
 
