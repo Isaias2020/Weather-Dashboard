@@ -2,7 +2,7 @@ $(document).ready(function () {
     let appID = "b397225e3e6e7043cc26284176c744bd";
     let weather = "";
     let city = "";
-    let todays_date = moment().format('dddd,MMMM Do YYYY');
+    let todays_date = moment().format('l');
     let search_history = JSON.parse(localStorage.getItem("cities")) === null ? [] : JSON.parse(localStorage.getItem("cities"));
 
 
@@ -31,7 +31,7 @@ $(document).ready(function () {
             let windspeed = json.wind.speed * 2.237;
 
             $("#current-city").text(json.name + " " + todays_date);
-            $("#weather-img").text("src", "https://api.openweathermap.org/img/w/" + json.weather[0].icon + ".png");
+            $("#weather-img").attr("src", "https://api.openweathermap.org/img/w/" + json.weather[0].icon + ".png");
             $("#temperature").text(temp.toFixed(2) + "°F");
             $("#humidity").text(json.main.humidity + "%");
             $("#windspeed").text(windspeed.toFixed(2) + " " + "mph");
