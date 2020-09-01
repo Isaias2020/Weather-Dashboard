@@ -68,6 +68,7 @@ $(document).ready(function () {
         });
     }
 
+    // Display for Search bar and history searches // 
     function displaySearches() {
 
         $("#searched-cities").empty();
