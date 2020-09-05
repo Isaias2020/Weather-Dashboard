@@ -7,12 +7,12 @@ $(document).ready(function () {
 
 
     displaySearches();
-    function currentWeather() {
+    function currentWeather(currentcity = null) {
 
         if ($(this).attr("id") === "searchcityBtn") {
             city = $("#searchBar").val();
         } else {
-            city = $(this).text();
+            city = currentcity;
         }
 
         weather = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=" + appID;
@@ -37,6 +37,10 @@ $(document).ready(function () {
             $("#windspeed").text(windspeed.toFixed(2) + " " + "mph");
         });
     }
+
+    $(".search_history").on("click", "li", function () {
+        currentWeather($(this).text());
+    });
 
     function FiveDayForecast() {
 

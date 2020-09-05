@@ -1,13 +1,22 @@
 header {
     background-color: #014f9d;
     width: 100%;
-    margin: 0 0 1em 0;
+    margin: auto;
     height: auto;
     text-align: center;
     color: #ffffff;
     padding: 1em;
     display: block;
     font-size: 35px;
+}
+
+.col-3 {
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.list-group-item {
+    border: 1px solid black;
 }
 
 body {
@@ -18,11 +27,13 @@ body {
 .searchcityButton {
     background-color: #014f9d;
     color: #ffffff;
+    border-radius: 8px;
 }
 
 .clearhistoryBtn{
     background-color: #014f9d;
     color: #ffffff;
+    border-radius: 8px;
 }
 
 #searchBar {
@@ -37,6 +48,7 @@ body {
     width: calc((100% /5) - 0.5em);
     padding: 1em;
     margin: 0.1em;
+    border: 1px solid black;
     border-radius: 8px;
 }
 
